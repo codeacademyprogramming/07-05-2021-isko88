@@ -204,3 +204,12 @@ document
   document.querySelector("#CustomerModal").style.display = "none";
   document.querySelector("#CustomerModal").style.opacity = "0";
 });
+
+//  Customer Modal will be display none when clicked over body
+window.addEventListener("click", function (event) {
+  if (event.target == document.querySelector("#CustomerModal")) {
+    document.querySelector("#CustomerModal").style.display = "none";
+    document.querySelector("#CustomerModal").style.opacity = "0";
+  }
+  });
+  
