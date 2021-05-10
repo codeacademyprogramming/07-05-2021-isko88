@@ -197,3 +197,10 @@ document
   .addEventListener("click", function () {
     document.querySelector(".filter .sort-filter").classList.toggle("clicked");
   });
+  // In Customer Modal Close button click event
+document
+.querySelector("#CustomerModal .close")
+.addEventListener("click", function () {
+  document.querySelector("#CustomerModal").style.display = "none";
+  document.querySelector("#CustomerModal").style.opacity = "0";
+});
