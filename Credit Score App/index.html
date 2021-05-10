@@ -8,6 +8,49 @@
     <title>Credit Score App</title>
   </head>
   <body>
+    <div id="CustomerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div
+          class="customer-photo-name text-center row align-center justify-center"
+        >
+          <img id="current-customer-photo" src="" alt="Customer Photo" />
+          <span id="current-customer-fullname"></span>
+        </div>
+        <section class="modal-table">
+          <table>
+            <tbody>
+              <tr>
+                <th>#</th>
+                <th>Loaner</th>
+                <th>Amount</th>
+                <th>Is active loan</th>
+                <th>Monthly pay</th>
+                <th>Due amount</th>
+                <th>Start date</th>
+                <th>End date</th>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="container">
+      <h3 class="table-title">Credit Score Table</h3>
+      <!-- <div class="row space-between align-center">
+        <ul>
+          <li class="active">All</li>
+          <li>Paid</li>
+          <li>Unpaid</li>
+          <li>Overdue</li>
+        </ul>
+        <div class="total-payable">
+          <span
+            >Total payable amount: <span>900.00</span> <span>AZN</span>
+          </span>
+        </div>
+      </div> -->
+      <hr />
 
       <section class="table">
         <div class="filter">
