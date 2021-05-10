@@ -190,3 +190,10 @@ function FilterByFullName() {
     }
   }
 }
+
+// Filter Btn , click event . Display Block sort filter div;
+document
+  .querySelector("button.filter-btn")
+  .addEventListener("click", function () {
+    document.querySelector(".filter .sort-filter").classList.toggle("clicked");
+  });
