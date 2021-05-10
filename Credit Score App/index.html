@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Credit Score App</title>
+  </head>
+  <body>
+
+      <section class="table">
+        <div class="filter">
+          <div class="row align-center space-between">
+            <div class="filter-search">
+              <div class="row">
+                <button class="filter-btn d-flex align-center">
+                  <span
+                    ><img
+                      id="search"
+                      src="./assets/images/icons/Filter.svg"
+                      alt="Filter Icon"
+                  /></span>
+                  Filter
+                </button>
+                <input
+                  id="search-input"
+                  class="search"
+                  onkeyup="FilterByFullName()"
+                  type="text"
+                  placeholder="Search Customers by Name, Surname"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="sort-filter">
+            <ul class="flex-column">
+              <li>Sort by:</li>
+              <li>
+                <div class="row space-between sort-part">
+                  <label for="sort-default">Default</label
+                  ><input
+                    type="radio"
+                    name="radio-btn"
+                    id="sort-default"
+                    checked
+                  />
+                </div>
+              </li>
+              <li>
+                <div class="row space-between sort-part">
+                  <label for="sort-active-loan">Active Loan</label
+                  ><input type="radio" name="radio-btn" id="sort-active-loan" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <th>#</th>
+              <th>Photo</th>
+              <th>Name&Surname</th>
+              <th>Monthly Salary</th>
+              <th>Active loan</th>
+              <th class="text-center">Total monthly pay</th>
+              <th>Apply for loan</th>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script src="./assets/js/app.js?n=1"></script>
+  </body>
+</html>
