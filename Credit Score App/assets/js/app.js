@@ -171,3 +171,22 @@ function buildTable(filtertype = false) {
       }
     });
 }
+
+function FilterByFullName() {
+  let input, filter, table, tr, td, i, txtValue;
+  input = document.querySelector("#search-input");
+  filter = input.value.toLowerCase();
+  table = document.querySelector("section.table table");
+  tr = table.querySelectorAll("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].querySelectorAll("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
