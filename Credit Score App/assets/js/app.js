@@ -213,3 +213,38 @@ window.addEventListener("click", function (event) {
   }
   });
   
+  document
+  .querySelector("#sort-active-loan")
+  .addEventListener("change", function () {
+    if (this.checked) {
+      buildTable("Active Loans");
+    }
+  });
+  document.querySelector("#sort-default").addEventListener("change", function () {
+  if (this.checked) {
+    buildTable("Default");
+  }
+  });
+  
+  function FilterActiveLoans(data) {
+  let newObj = [];
+  data.forEach((d) =>
+    d["loans"].filter((a) => {
+      if (a["closed"] == false) {
+        newObj.push(d);
+      }
+    })
+  );
+  return newObj;
+  }
+  function Default_Filter(data) {
+  return data;
+  }
+  function Fullname_Filter(data) {
+  data.sort((a, b) => {
+    return a < b ? -1 : a > b ? 1 : 0;
+  });
+  }
+  
+  
+  
